@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: #FAF9F6;
+    color: #111827;
+    scroll-behavior: smooth;
+  }
+
+  html.dark {
+    background-color: #0B101B;
+    color: #F8FAFC;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
+.font-mono-url {
+  font-family: var(--font-mono);
+  font-feature-settings: "zero" 1;
+}
+
+/* Subtle editorial grid texture in hero */
+.editorial-grid {
+  background-image: radial-gradient(rgba(15, 118, 110, 0.11) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .editorial-grid {
+  background-image: radial-gradient(rgba(45, 212, 191, 0.09) 1px, transparent 1px);
+}

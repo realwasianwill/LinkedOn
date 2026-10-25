@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+*.log
+.DS_Store
+.env
+.env.local
+server/data/*.db-shm
+server/data/*.db-wal
+server/data/linkedon.db
